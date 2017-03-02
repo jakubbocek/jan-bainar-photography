@@ -1,0 +1,211 @@
+// Core variables and mixins
+@import (less) "../bower_components/bootstrap/less/variables.less";
+@import (less) "../bower_components/bootstrap/less/mixins.less";
+// Reset and dependencies
+@import (less) "bower_components/bootstrap/less/normalize.less";
+@import (less) "bower_components/bootstrap/less/print.less";
+@import (less) "bower_components/bootstrap/less/glyphicons.less";
+// Core CSS
+@import (less) "bower_components/bootstrap/less/scaffolding.less";
+@import (less) "bower_components/bootstrap/less/type.less";
+
+/*@import (less) "bower_components/bootstrap/less/code.less";*/
+
+@import (less) "bower_components/bootstrap/less/grid.less";
+/*@import (less) "bower_components/bootstrap/less/tables.less";*/
+@import (less) "bower_components/bootstrap/less/forms.less";
+@import (less) "bower_components/bootstrap/less/buttons.less";
+// Components
+@import (less) "bower_components/bootstrap/less/component-animations.less";
+@import (less) "bower_components/bootstrap/less/dropdowns.less";
+@import (less) "bower_components/bootstrap/less/button-groups.less";
+
+@import (less) "bower_components/bootstrap/less/input-groups.less";
+
+@import (less) "bower_components/bootstrap/less/navs.less";
+@import (less) "bower_components/bootstrap/less/navbar.less";
+//@import (less) "bower_components/bootstrap/less/breadcrumbs.less";
+/*@import (less) "bower_components/bootstrap/less/pagination.less";*/
+
+/*@import (less) "bower_components/bootstrap/less/pager.less";*/
+
+
+/*@import (less) "bower_components/bootstrap/less/labels.less";*/
+
+
+/*@import (less) "bower_components/bootstrap/less/badges.less";*/
+
+
+/*@import (less) "bower_components/bootstrap/less/jumbotron.less";*/
+
+
+/*@import (less) "bower_components/bootstrap/less/thumbnails.less";*/
+
+/*@import (less) "bower_components/bootstrap/less/alerts.less";*/
+
+/*@import (less) "bower_components/bootstrap/less/progress-bars.less";*/
+
+@import (less) "bower_components/bootstrap/less/media.less";
+
+/*@import (less) "bower_components/bootstrap/less/list-group.less";*/
+
+//@import (less) "bower_components/bootstrap/less/panels.less";
+@import (less) "bower_components/bootstrap/less/responsive-embed.less";
+
+/*@import (less) "bower_components/bootstrap/less/wells.less";*/
+
+//@import (less) "bower_components/bootstrap/less/close.less";
+// Components w/ JavaScript
+//@import (less) "bower_components/bootstrap/less/modals.less";
+/*@import (less) "bower_components/bootstrap/less/tooltip.less";*/
+
+/*@import (less) "bower_components/bootstrap/less/popovers.less";*/
+
+/*@import (less) "bower_components/bootstrap/less/carousel.less";*/
+// Utility classes
+@import (less) "bower_components/bootstrap/less/utilities.less";
+@import (less) "bower_components/bootstrap/less/responsive-utilities.less";
+
+/*@import (less) "bower_components/chosen/chosen.css";*/
+
+//@import (less) "bower_components/jqcloud2/dist/jqcloud.min.css";
+/*@import (less) "bower_components/cropperjs/dist/cropper.min.css";*/
+/*@import (less) "bower_components/chosen/chosen.css";*/
+/*@import (less) "bower_components/rateYo/min/jquery.rateyo.min.css";*/
+/*@import (less) "bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css";*/
+
+@import (less) "../css/common.less";
+@import (less) "css/sprites.less";
+
+//@import (less) "fonts/proximanova.css";
+
+//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css
+/*@import "http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css";*/
+
+/*@import "https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext";
+
+
+/*@import (less) "bower_components/select2/dist/css/select2.min.css";*/
+
+@import (less) "bower_components/slick-carousel/slick/slick.css";
+
+/*@import (less) "bower_components/nouislider/distribute/nouislider.min.css";*/
+
+/*@import (less) "bower_components/raty/lib/jquery.raty.css";*/
+
+/*@import (less) "bower_components/featherlight/release/featherlight.min.css";*/
+
+//@import (less) "ilightbox/css/ilightbox.css";
+//@import (less) "ilightbox/light-skin/skin.css";
+
+//@import (less) "bower_components/font-awesome-4.5.0/css/font-awesome.min.css";
+//@import (less) "css/font-awesome.min.css";
+//@import (less) "bower_components/fullpage.js/jquery.fullPage.css";
+
+/*@import (less) "bower_components/WOW-master/css/libs/animate.css";*/
+/*@import (less) "bower_components/datetimepicker/build/jquery.datetimepicker.min.css";*/
+
+.font1() {
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+    background: @white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden!important;
+    overflow-y: scroll!important;
+    color: black;   
+    -webkit-overflow-scrolling: touch;
+
+    //flex
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content{
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+body.loaded {
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+.wf-loading * {
+  color: transparent !important;
+}
+
+.wf-active body {
+    .font1;
+}
+
+/*.container, .container-fluid
+{
+    @media @sm,@xs
+    {
+        overflow:hidden;
+    }
+}
+*/
+/*.container.container--smaller
+{
+    width: 866px;
+    
+    @media @sm
+    {
+        width: 750px;        
+    }
+    
+    @media @xs
+    {
+        width: 100%;        
+    }
+}*/
+
+/*.body--flex{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content--flex{
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.footer--flex{
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}*/
+
+.container-galery{
+    @media @min-sm{
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+}
+
+@import (less) "css/mixins.less";
+@import (less) "css/_header.less";
+@import (less) "css/_footer.less";
+@import (less) "css/_content.less";
+@import (less) "css/_hp.less";
+@import (less) "css/_button.less";
+@import (less) "../css/cenik.less";

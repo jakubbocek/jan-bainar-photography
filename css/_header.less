@@ -1,0 +1,279 @@
+.header
+{
+  width:100%;
+  background: @black;
+  @media @xs{
+    height: 80px;
+  }
+}
+
+.header__logo
+{
+  .logo;
+  .notext;
+  margin: 0 62px;
+  padding: 0;
+  margin-top: 35px;
+  @media @md{
+    margin: 0 62px/2;
+    margin-top: 35px;
+  }
+  @media @sm{
+    margin: 0;
+    margin-top: 35px;
+  }
+  @media @xs{
+    margin: 0;
+    margin-top: 15px;
+  }
+
+}
+
+.header__nav
+{
+  list-style:none;
+  padding:0;
+  margin-left: 167px;
+  @media @md{
+    margin-left: 167px/2;
+  }
+  @media @sm{
+    margin: 0;
+  }
+  @media @xs{
+    margin: 0;
+  }
+  text-align:right;
+  display: flex;
+  flex-direction: row;
+  float:left;
+  @media @xs{
+    float: none;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.header__nav>li
+{
+  flex-grow: 1;
+}
+
+.header__nav>li>a
+{
+  display:block;
+  text-transform: uppercase;
+  color:#eeeeee;
+  font-size:13px;
+  font-weight: 500;
+  padding:0 18px;
+  line-height:120px;
+  @media @md,@sm{
+    padding:0 18px/2;
+  }
+  @media @xs{
+    line-height: 51px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.header__nav>li>a:hover,
+.header__nav>li>a.active
+{
+  color:#eeeeee;
+  text-decoration:underline;
+}
+
+
+.navbar-toggle .icon-bar
+{
+  background:white;
+  width:20px;
+}
+
+
+
+.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0;
+  @media @xs{
+    overflow-x: inherit;
+    z-index: 10;
+    border-top: none;
+    box-shadow: none;
+    -webkit-overflow-scrolling: touch;
+    background: @black;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+}
+
+.navbar-collapse.in {
+  @media @xs{
+    overflow-y: inherit;
+  }
+
+}
+
+.navbar-toggle {
+  position: absolute;
+  right: 34px;
+  padding: 0;
+  top: 30px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  z-index: 200;
+  @media @xs{
+    display: block;
+  }
+
+  height: 14px;
+  width: 20px;
+  cursor: pointer;
+  margin: 0;
+
+}
+.navbar-toggle .f-line{
+  @media @xs{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.navbar-toggle.open .f-line{
+  @media @xs{
+    transform: translateY(10px) translateX(0) rotate(45deg);
+  }
+
+}
+
+.navbar-toggle .s-line{
+  @media @xs{
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+
+}
+
+.navbar-toggle.open .s-line{
+  @media @xs{
+    display: none;
+  }
+
+}
+
+.navbar-toggle .t-line{
+  @media @xs{
+    position: absolute;
+    top: 12px;
+    left: 0;
+  }
+
+}
+.navbar-toggle.open .t-line{
+  @media @xs{
+    top: 15px;
+    transform: translateY(-5px) translateX(0) rotate(-45deg);
+  }
+
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+  margin-top: 0;
+}
+
+
+.dropdown{
+  button{
+    position: relative;
+    border: none;
+    padding: 0 18px;
+    line-height: 120px;
+    display: block;
+    .upper;
+    width: 100%;
+    color:#eeeeee;
+    font-size: 13px;
+    font-weight: 500;
+    background: none;
+    border-top: none;
+    border-bottom:none;
+    text-align: center;
+    &:hover{
+      text-decoration: underline;
+    }
+    @media @xs{
+      line-height: 51px;
+    }
+
+    .icon-arrows{
+      @media @xs{
+        left: 50%;
+        margin-left: 35px;
+        top: 23px
+      }
+      position: absolute;
+      left: 74px;
+      top: 58px;
+      display: inline-block;
+      .arrow;
+    }
+  }
+
+  .dropdown-menu{
+    width: 100%;
+    margin: 0;
+    li{
+      a{
+        .upper;
+        color: @black;
+        &:hover,&:focus{
+          color: @black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.languages{
+  color: @white;
+  @media @min-sm{
+    position: absolute;
+    top: 49px;
+    right: 55px;
+  }
+
+  @media @xs{
+    line-height: 51px;
+    text-align: center;
+  }
+
+  @media @sm{
+
+    right: 7px;
+  }
+
+  a{
+    text-transform: uppercase;
+    color: @white;
+    font-weight: 500;
+    font-size: 13px;
+
+    &:hover{
+      text-decoration: underline;
+      font-weight: 900;
+      color: @white;
+    }
+  }
+  a.active{
+    font-weight: 900;
+    text-decoration: underline;
+  }
+}

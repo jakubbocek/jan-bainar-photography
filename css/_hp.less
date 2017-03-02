@@ -1,0 +1,158 @@
+
+.loaded .homepage .background {
+  transform: scale(1);
+  transition: 4.5s transform;
+}
+
+/*.homepage{
+
+  @media @min-sm{
+    height: calc(~"100vh - 193px");
+  }
+  height: 100vh;
+  //background-size:cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media @xs{
+    flex-direction: row;
+  }
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+}*/
+
+.hp{
+  overflow:hidden ;
+  position: relative;
+  padding: 0;
+  height: 100%;
+  @media @xs{
+    flex-direction: row;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media @min-sm{
+    height: calc(~"100vh - 193px");
+
+  }
+
+
+
+}
+
+.hp:before {
+  content: "";
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  z-index: -1;
+
+  background: url(../images/bg-hp.jpg) no-repeat top center;
+  background-size: cover;
+
+  animation:move 16s ease forwards;
+  @media @min-sm{
+    height: calc(~"100vh - 193px");
+  }
+  height: 100%;
+}
+
+//animace
+@keyframes move {
+  from {
+
+    transform: translate3d(0,0,0) scale(1.25);
+  }
+  to {
+    transform: scale3d(1);
+  }
+
+
+}
+
+
+
+.box-mood{
+  margin-bottom: 10px;
+    @media @xs{
+      margin-top: 10px;
+    }
+  .heading{
+    font-size: 20px;
+    font-weight: 400;
+    background: @black;
+    color: @white;
+    height: 84px;
+    line-height: 84px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .content{
+    background:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    padding: 30px 84px;
+    min-height: 226px;
+    @media @sm,@md{
+      min-height: 313px;
+    }
+
+    @media @xs{
+      padding: 10px;
+    }
+  }
+
+  .content--two{
+    @media @min-md{
+      padding: 30px 112px;
+    }
+  }
+
+  .extra-title,.extra-title a{
+    font-size: 40px;
+    color: @white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 58px;
+    margin: 0 5px;
+    font-weight: 400;
+  }
+  .active-title{
+    text-decoration: underline;
+  }
+
+  .big-title,.big-title a{
+    font-size: 35px;
+    color: @white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    font-weight: 400;
+  }
+
+  .small-title, .small-title a{
+    font-size: 30px;
+    color: @white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 48px;
+    margin: 0 5px;
+    font-weight: 400;
+  }
+  .smaller-title,.smaller-title a{
+    font-size: 25px;
+    color: @white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 39px;
+    margin: 0 5px;
+    font-weight: 400;
+  }
+}
